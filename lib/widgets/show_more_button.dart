@@ -8,10 +8,9 @@ class ShowMoreButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
+    return IconButton(
       onPressed: () {},
-      backgroundColor: Colors.white,
-      child: Icon(
+      icon: Icon(
         Icons.arrow_forward,
         color: primaryColor,
       ),

@@ -2,6 +2,7 @@ import 'package:food_delivery/models/food.dart';
 
 List<Food> allFoods = [
   Food(
+    id: 1,
     name: 'Guay Teow (Noodle Soup)',
     image: 'images/foods/noodles.jpeg',
     price: 100,
@@ -10,6 +11,7 @@ List<Food> allFoods = [
         'Guay teow is arguably one of the most popular Thai dishes and can be found almost everywhere. Guay teow describes any type of noodle soup. It can be made with chicken, pork, or beef (rarely vegetarian-friendly) as well as either rice noodles or egg noodles',
   ),
   Food(
+    id: 2,
     name: 'Pizza',
     image: 'images/foods/pizza.jpeg',
     price: 300,
@@ -18,6 +20,7 @@ List<Food> allFoods = [
     cal: 266,
   ),
   Food(
+    id: 3,
     name: 'Burgers',
     image: 'images/foods/burger.jpeg',
     price: 120,
@@ -26,6 +29,7 @@ List<Food> allFoods = [
     cal: 300,
   ),
   Food(
+    id: 4,
     name: 'Soupe de Poissons (Fish Soup)',
     image: 'images/foods/fish_soup.jpeg',
     price: 350,
@@ -34,6 +38,7 @@ List<Food> allFoods = [
     cal: 456,
   ),
   Food(
+    id: 5,
     name: 'Peking Roasted Duck',
     image: 'images/foods/peking_duck.jpeg',
     price: 399,

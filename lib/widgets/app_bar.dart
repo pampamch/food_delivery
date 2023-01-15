@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_delivery/constants.dart';
+import 'package:food_delivery/screen/favorite_list_screen.dart';
 
 class AppBarText extends StatelessWidget {
   const AppBarText({Key? key}) : super(key: key);
@@ -27,9 +28,17 @@ class AppBarText extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(right: padding, top: 50),
-              child: const Align(
+              child: Align(
                 alignment: Alignment.topLeft,
-                child: Icon(Icons.favorite_outline),
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FavoriteListScreen(),
+                          ));
+                    },
+                    icon: Icon(Icons.favorite_outline)),
               ),
             ),
           ],
