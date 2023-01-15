@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_delivery/constants.dart';
 
 class AppBarText extends StatelessWidget {
   const AppBarText({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class AppBarText extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 20, top: 40),
+              padding: EdgeInsets.only(left: padding, top: 50),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: SvgPicture.asset(
@@ -24,11 +25,11 @@ class AppBarText extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(right: 20, top: 40),
-              child: Align(
+            Padding(
+              padding: EdgeInsets.only(right: padding, top: 50),
+              child: const Align(
                 alignment: Alignment.topLeft,
-                child: Icon(Icons.shopping_cart_outlined),
+                child: Icon(Icons.favorite_outline),
               ),
             ),
           ],

@@ -7,4 +7,4 @@ const primaryColor = Color(0xfffb475f);
 const secondaryColor = Color(0xfff5e1cb);
 const borderColor = Color(0xffdddddd);
 
-double paddingLeft = 20;
+double padding = 20;

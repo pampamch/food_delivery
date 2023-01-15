@@ -38,15 +38,11 @@ class _CategoryNavigationBarState extends State<CategoryNavigationBar>
 
   @override
   Widget build(BuildContext context) {
-    _tabs = widget.pages.asMap().entries.map(
-      (entry) {
-        int idx = entry.key;
-        Categories page = entry.value;
-        return _buildTabItem(
-          Text(page.name.toUpperCase()),
-        );
-      },
-    ).toList();
+    _tabs = widget.pages
+        .map((page) => _buildTabItem(
+              Text(page.name.toUpperCase()),
+            ))
+        .toList();
 
     return TabBar(
       controller: _tabController,
@@ -55,12 +51,17 @@ class _CategoryNavigationBarState extends State<CategoryNavigationBar>
       isScrollable: true,
       indicatorColor: Colors.transparent,
       tabs: _tabs,
+      onTap: (value) {
+        if (widget.onTabChanged != null) {
+          widget.onTabChanged!(value);
+        }
+      },
     );
   }
 
   Widget _buildTabItem(Widget child) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: paddingLeft),
+      padding: EdgeInsets.symmetric(vertical: padding),
       child: child,
     );
   }
